@@ -1,0 +1,118 @@
+1) npm init
+2) npm install -D parcel 
+3) npm i react
+4) npm i react-dom
+5) Code setup 
+index.html 
+----------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root">No Data Rendered</div>
+    <script type="module" src="App.js"></script>
+  </body>
+</html>
+
+App.js 
+------
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const element = <h1>Hello, world</h1>;
+root.render(element);
+-------
+6) npx parcel index.html
+7) HMR - Hot Module Reload --> Due to this parcel refreshes the browser if any changes done in code 
+8) Script type should be module as we are exporting the library files from node module. Example below :-
+    <script type="module" src="App.js"></script>
+9) File watcher algorithm --> It keeps track of any changes done in any file and refreshes the page.
+10) Parcel jobs behind the scene are given below :-
+    --> Creates a Server (http://localhost:1234/)
+    --> HMR - Hot Module Replacement --> Due to this parcel refreshes the browser if any changes done in code
+    --> File watcher algorithm keeps track of any changes done in any file and refreshes the page.
+    --> Bundling the code for production ready code
+    --> Minify (On Production Environment)
+    --> Cleaning all unwanted code like console.log.
+        To remove console.log install(npm install babel-plugin-transform-remove-console --save-dev)
+        // with options --> create .babelrc file and add below code in that file
+        {
+        "plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]
+        }
+    --> Manages Dev and Production Build & it is super fast build algorithm 
+    --> It optimises images and videos 
+    --> Caching while Development 
+    --> It compresses files. 
+    --> Compatible with older versions of Browsers (It adds polyfill)
+    --> It help enabling HHTPS on DEV environment (npx parcel index.html --https)
+    --> If we run/build 2 project simultanisously then parcel auto manages ports for 2 projects 
+    --> Parcel-Cache should be put in git ignore 
+    --> Consistent Hashing Alorithm 
+    --> Parcel is Zero Config bundler 
+    --> Transitive Dependencies (One package is dependent on another and another is dependent on other)
+    --> Tree Shaking --> Removes all unwanted code
+
+
+11) https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z --> Contains all supported browsers and versions 
+12) React Reconciliation  --> If any new html elements is introduces and if it does not have key, 
+    react takes lots of time to re-render DOM.
+    But if we have specific and unique key attached to html element 
+    then it just re-render it withput updating whole DOM
+    (Documentation - https://reactjs.org/docs/reconciliation.html)
+    <ul>
+        <li key="2014">Connecticut</li>
+        <li key="2015">Duke</li>
+        <li key="2016">Villanova</li>
+    </ul>
+
+13) React.createElement gives us an Object and this object is converted into HTML and it renders in DOM
+14) JSX --> It is an HTML like syntax, but it is not HTML inside JavaScript. 
+15) JSX code is not understood by Browser, BABEL understand and create browser readable code and then
+    it is executed in Browser
+16) Babel --> Is a compiler for next generation JavaScript. 
+17) JSX --> Uses React.createElement --> Then it is converted to Object --> Then HTML --> Render in DOM
+18) node_modules --> Also has package-lock.json file. 
+    this package-lock.json contails all Transitive Dependencies 
+    (One package is dependent on another and another is dependent on other)
+19) React Component :--> 
+    a) React Component is of two type (Functional Component & Class Based Component)
+    b) Functional Component --> Name starts with the Capital Letter. Example below :-
+        const HeaderComponent = () => {
+        return <h1>Functional Header Component</h1>;
+        };
+    c) Functional Component is nothing but it it just a Functional 
+    d) To render functional component we use --> root.render(<HeaderComponent />)
+    e) To render react element we use -->  root.render(header). Here const header = <h1>Header</h1>  
+    f) If we want to use react element inside function we can do with {} brace as below :-
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        const name = <h1>Bikash Shaw</h1>;
+        const HeaderComponent = () => {
+        return (
+            <div>
+            {name} <-- Like this 
+            <h1>Functional Header Component</h1>;
+            </div>
+        );
+        };
+        root.render(<HeaderComponent />); 
+    g) If we want to use functional component into functional component (Nested Component) 
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        const NameComponent = () => {
+        return <h1>Bikash Shaw</h1>;
+        };
+        const HeaderComponent = () => {
+        return (
+            <div>
+            {NameComponent()} <-- Call it as a normal function call.
+            <NameComponent /> <-- Call it as react tag.  
+            <h1>Functional Header Component</h1>;
+            </div>
+        );
+        };
+        root.render(<HeaderComponent />);    
