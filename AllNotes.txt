@@ -101,7 +101,8 @@ root.render(element);
         );
         };
         root.render(<HeaderComponent />); 
-    g) If we want to use functional component into functional component (Nested Component) 
+    g) Component Composition --> If we want to use functional component into functional component 
+       (Nested Component) 
         const root = ReactDOM.createRoot(document.getElementById("root"));
         const NameComponent = () => {
         return <h1>Bikash Shaw</h1>;

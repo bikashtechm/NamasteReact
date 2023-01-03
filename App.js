@@ -8,7 +8,7 @@ const NameComponent = () => {
 const HeaderComponent = () => {
   return (
     <div>
-      {NameComponent()}
+      {NameComponent}
       <NameComponent />
       <h1>Functional Header Component</h1>;
     </div>
