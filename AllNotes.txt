@@ -110,7 +110,7 @@ root.render(element);
         return (
             <div>
             {NameComponent()} <-- Call it as a normal function call.
-            <NameComponent /> <-- Call it as react tag.  
+            <NameComponent /> <-- Call it as JSX tag.  
             <h1>Functional Header Component</h1>;
             </div>
         );
