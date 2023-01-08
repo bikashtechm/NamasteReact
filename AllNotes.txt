@@ -117,3 +117,27 @@ root.render(element);
         );
         };
         root.render(<HeaderComponent />);    
+
+
+20) {} ==> We can write any piece of JavaScript code inside curly braces
+21) Is JSX mandatory --> JSX is not mandatory. 
+22) Is TypeScript mandatory --> TypeScript is not mandatory
+23) Is ES6 mandatory --> ES6 is not mandatory
+24) React is a library and it does not restricts on any language. We can use any language.
+25) JSX expression should have only one parent element.
+    a) React.Fragment --> React.Fragment is a component which is exported by React library.
+    b) React.Fragment --> It is like an empty tag.
+    c) React.Fragment --> shorthand for React.Fragment is <> </>
+    d) Can we use nested React.Fragment --> ? (Need to google it)
+26) 
+27)
+28)
+29)
+30)
+31)
+32)
+33)
+34)
+35)
+36)
+        
