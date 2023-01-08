@@ -17,3 +17,15 @@
 .logo {
   width: 100px;
 }
+
+.card {
+  width: 200px;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 3px 3px grey;
+}
+
+.card > img {
+  width: 100%;
+}

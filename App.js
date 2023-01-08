@@ -42,11 +42,22 @@ const Header = () => {
   );
 };
 
+const RestaurantCard = () => {
+  return (
+    <div className="card">
+      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/7bb739d7f6ae8b4ce8ed590765dffd2f" />
+      <h2>McDonald's</h2>
+      <h3>Burger's , American</h3>
+      <h4>4.2 Stars</h4>
+    </div>
+  );
+};
+
 const Body = () => {
   return (
-    <>
-      <h4>Body Content here...</h4>
-    </>
+    <div>
+      <RestaurantCard />
+    </div>
   );
 };
 
