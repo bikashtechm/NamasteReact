@@ -146,9 +146,16 @@ root.render(element);
              One tree from other, to identify what needs to change and what shoul not change in DOM.
              {Key} which is unique are used for reconciliation to happen properly.
              React Fiber is a new Reconciliation Engine.
-             --> Why do we not use {index} as a key ? (https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/)
+             --> Why do we not use {index} as a key ?(https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/)
 
-30)
+30) Export Module --> 
+    a) Export Default --> We can only export default only one component.
+    b) Export default can we imported like --> import Header from "./components/Header"; (default import)
+    c) Export (also known as named import) --> import { Header } from "./components/Header"; (Named import)
+    d) If we have multiple function in one component and we want to import all the function. Below is code :-
+       import * as Obj from "./components/Header";       
+    e) 
+
 31)
 32)
 33)
