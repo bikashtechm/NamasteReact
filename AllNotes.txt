@@ -129,10 +129,25 @@ root.render(element);
     b) React.Fragment --> It is like an empty tag.
     c) React.Fragment --> shorthand for React.Fragment is <> </>
     d) Can we use nested React.Fragment --> ? (Need to google it)
-26) 
-27)
-28)
-29)
+26) Config Driven UI -->
+    a) 
+27) Optional Chaining --> {Google it}
+28) Props --> 
+    a) Props is nothing but a properties
+    b) Props is passing some data into our component
+    c) Send data from Parent to Child we pass it as a PROPS
+    d) 
+29) Virtual DOM -->
+    a) Virtual DOM is not just a concept for react only. It is used in may places, react also has virtual DOM
+    b) Virtual DOM is a software engineering concept.
+    c) Virtual DOM is a representation of actual DOM in our Code.
+    d) Why do we need Virtual DOM ?
+        Ans) We need it for re-concilliation. Reconciliation is an algorithm that react uses to {diff}
+             One tree from other, to identify what needs to change and what shoul not change in DOM.
+             {Key} which is unique are used for reconciliation to happen properly.
+             React Fiber is a new Reconciliation Engine.
+             --> Why do we not use {index} as a key ? (https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/)
+
 30)
 31)
 32)

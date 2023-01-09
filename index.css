@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  border: 1px dotted gray;
+  border: 1px solid gray;
+  box-shadow: 2px 2px grey;
 }
 
 .nav-items > ul {
@@ -20,12 +21,38 @@
 
 .card {
   width: 200px;
+  height: 250px;
   border: 1px solid gray;
-  padding: 5px;
   margin: 10px;
+  padding: 13.5px;
   box-shadow: 3px 3px grey;
 }
 
 .card > img {
   width: 100%;
+}
+
+.restaurant-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurant-name {
+  font-size: 17px;
+  font-weight: 500;
+  word-break: break-word;
+  margin: 15px;
+}
+
+.restaurant-cuisines {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-top: 15px;
+}
+
+.restaurant-star {
+  background-color: #48c479;
+  color: #fff;
+  margin-top: 15px;
 }
