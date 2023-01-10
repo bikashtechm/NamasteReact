@@ -156,7 +156,15 @@ root.render(element);
        import * as Obj from "./components/Header";       
     e) 
 
-31)
+31) Data Binding -->
+    a) React uses One Way Data Binding
+    b) State --> Every component in React maintains a STATE and we can put variable into that STATE
+    c) Hook --> Is nothing but a normal function 
+    d) useState() --> It creates a state variables
+    e) useState() --> this function returns an array. First element of an array is "variableName", second is "setVariable"
+    f) const [searchTxt] = useState(); --> This is how we create local state variables in React
+    g) useState comes as (named import) in react
+    h) 
 32)
 33)
 34)
