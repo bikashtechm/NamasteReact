@@ -22,7 +22,7 @@ const Body = () => {
         />
         <button
           type="submit"
-          class="searchButton"
+          className="searchButton"
           onClick={() => {
             const data = filterRestaurantData(searchTxt, restaurantListData);
             setRestaurantListData(data);
