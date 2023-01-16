@@ -165,8 +165,18 @@ root.render(element);
     f) const [searchTxt] = useState(); --> This is how we create local state variables in React
     g) useState comes as (named import) in react
     h) 
-32)
-33)
+32) API Calls -->
+    a) fetch() --> browser API is used to call an API
+    b) We will not call fetch() directly in our component, because every time if any state variable changes,
+       Component get redenderd and API will be called again and again. This is bad implementation 
+    c) Component gets renders 2 times, on PROPS change and on STATE change
+    d) If we dont provide "dependency Array" in side useEffect then it will get call on every re render.
+    e) If we dont want to call it on every re render then we pass "dependency array" in useEffect.
+    f) useEffect(() => {    
+        }, []); ==> here [] is a dependency array
+    g) If we dont give any dependency in "dependency array" then it will get called only once after "render"
+    h)     
+33) Shimmer UI --> Load a blank page design before APIL call and fill data filling happens.
 34)
 35)
 36)

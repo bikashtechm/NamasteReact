@@ -74,9 +74,30 @@
   cursor: pointer;
   font-size: 20px;
 }
+.searchButtonShimmer {
+  width: 77px;
+  height: 36px;
+  border: 1px solid #dfdcda;
+  background: #dfdcda;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
 .searchTerm {
   width: 13%;
   border: 3px solid #fc8019;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+.searchTermShimmer {
+  width: 13%;
+  border: 3px solid #dfdcda;
   border-right: none;
   padding: 5px;
   height: 20px;
