@@ -22,7 +22,8 @@ const Body = () => {
   function filterRestaurantData(searchTxt, data) {
     return data.filter((res) => res.data.name.includes(searchTxt));
   }
-  return filterRestaurantListData.length === 0 ? (
+
+  return allRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <>
