@@ -75,26 +75,26 @@
   margin-left: 9px;
 }
 .searchButton {
-  width: 77px;
+  width: 59px;
   height: 36px;
-  border: 1px solid #fc8019;
-  background: #fc8019;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  background: #fc8019;
+  border: 1px solid #fc8019;
+  border-radius: 0 5px 5px 0;
+  font-size: 15px;
 }
 .searchButtonShimmer {
-  width: 77px;
+  width: 59px;
   height: 36px;
-  border: 1px solid #dfdcda;
-  background: #dfdcda;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  background: #fc8019;
+  border: 1px solid #fc8019;
+  border-radius: 0 5px 5px 0;
+  font-size: 15px;
 }
 .searchTerm {
   width: 13%;
@@ -194,4 +194,25 @@ li a.active {
 }
 .errorPage {
   text-align: center;
+}
+
+.restaurantcard {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+.restaurantcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.restaurantcontainer {
+  padding: 2px 16px;
+}
+
+.avatar {
+  width: 15%;
 }

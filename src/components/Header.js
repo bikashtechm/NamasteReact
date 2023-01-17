@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.jpeg";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Title = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>
-            <Link class="active" to="/">
+            <Link className="active" to="/">
               Home
             </Link>
           </li>

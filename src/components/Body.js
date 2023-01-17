@@ -12,7 +12,7 @@ const Body = () => {
 
   async function getRestaurants() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.603814324829916&lng=73.77531129972304&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
