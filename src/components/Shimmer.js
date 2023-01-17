@@ -10,7 +10,7 @@ const Shimmer = () => {
       </div>
       <div className="restaurant-lists">
         {Array(10).fill(
-          <div className="card">
+          <div className="cardShimmer">
             <img src="" />
             <div className="restaurant-name"></div>
             <div className="restaurant-cuisines"></div>

@@ -1,13 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/images/logo.jpeg";
 
 const Title = () => {
   return (
     <a href="/">
-      <img
-        alt="logo"
-        className="logo"
-        src="https://static.vecteezy.com/system/resources/previews/006/395/395/original/food-point-logo-symbol-and-icon-template-to-show-the-location-of-the-food-seller-vector.jpg"
-      />
+      <img alt="logo" className="logo" src={Logo} />
     </a>
   );
 };
@@ -20,18 +18,18 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>
-            <a class="active" href="#home">
+            <Link class="active" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">About Us</a>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
-            <a href="#">Cart</a>
+            <Link to="/cart">Cart</Link>
           </li>
         </ul>
       </div>

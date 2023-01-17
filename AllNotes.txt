@@ -177,7 +177,11 @@ root.render(element);
     g) If we dont give any dependency in "dependency array" then it will get called only once after "render"
     h)     
 33) Shimmer UI --> Load a blank page design before APIL call and fill data filling happens.
-34)
-35)
-36)
+34) Never --> Never create a component in side one component.
+35) Never --> Never write useState inside if condition or inside for loop, never write useState outside
+    functional component.
+36) We can create as many as useEffect we want.
+37) Forms npm package --> formik & yup--> npm i formik
+38) Link Component --> At the end of the day Link Component uses <a href > only.
+39) 
         
