@@ -20,9 +20,17 @@ const Body = () => {
   }
 
   function filterRestaurantData(searchTxt, data) {
-    return data.filter((res) => res.data.name.includes(searchTxt));
+    return data.filter((res) =>
+      res?.data?.name?.toLowerCase()?.includes(searchTxt.toLowerCase())
+    );
   }
-
+  if (!allRestaurants) return null;
+  // if (filterRestaurantListData.length === 0)
+  //   return (
+  //     <>
+  //       <h1>No such restaurant found...</h1>
+  //     </>
+  //   );
   return allRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (

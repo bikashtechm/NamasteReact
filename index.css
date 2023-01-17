@@ -109,3 +109,73 @@
 .searchTerm:focus {
   color: #060606;
 }
+.LoginButton {
+  color: #fff;
+  text-align: center;
+  background-color: #fc8019;
+  border: none;
+  padding: 4px 16px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  height: 10%;
+  margin-top: 27px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.LogoutButton {
+  color: #fff;
+  text-align: center;
+  background-color: #fc8019;
+  border: none;
+  padding: 4px 16px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  height: 10%;
+  margin-top: 27px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+li a.active {
+  color: white;
+  background-color: #04aa6d;
+  border-radius: 4px;
+}
+
+.footerLayout {
+  text-align: center;
+  color: #fff;
+  width: 97.9%;
+  background-color: #fc8019;
+  border-radius: 1px;
+  margin-left: 9px;
+  padding: 3px;
+  box-shadow: 3px 3px grey;
+}

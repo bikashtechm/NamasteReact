@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const Title = () => {
   return (
     <a href="/">
@@ -12,17 +13,47 @@ const Title = () => {
 };
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="header">
       <Title />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li>
+            <a class="active" href="#home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Cart</a>
+          </li>
         </ul>
       </div>
+      {isLoggedIn ? (
+        <button
+          className="LogoutButton"
+          onClick={() => {
+            setIsLoggedIn(false);
+          }}
+        >
+          Logout
+        </button>
+      ) : (
+        <button
+          className="LoginButton"
+          onClick={() => {
+            setIsLoggedIn(true);
+          }}
+        >
+          Login
+        </button>
+      )}
     </div>
   );
 };

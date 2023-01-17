@@ -1,8 +1,12 @@
 const Footer = () => {
   return (
-    <>
-      <h4>Footer Content here...</h4>
-    </>
+    <div className="footerLayout">
+      <p>
+        Author: Bikash Shaw
+        <br />
+        <a href="mailto:bikash.shaw@learn.com">bikash.shaw@learn.com</a>
+      </p>
+    </div>
   );
 };
 
