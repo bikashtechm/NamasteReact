@@ -12,10 +12,18 @@ class ProfileClass extends Component {
     const { target } = this.state;
     return (
       <div>
-        <h1>Profile Class Component</h1>
-        <h2>Name:{this.props.name}</h2>
-        <h3>Count : {this.state.count}</h3>
-        <h4>Target: {target}</h4>
+        <h4>Profile Class Component</h4>
+        <h5>Class - Name:{this.props.name}</h5>
+        <h6>Class - Count : {this.state.count}</h6>
+        <h6>Class - Target: {target}</h6>
+        <button
+          onClick={() => {
+            this.setState({ count: 10 });
+          }}
+        >
+          Count
+        </button>
+        <br />
       </div>
     );
   }
