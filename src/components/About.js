@@ -1,8 +1,14 @@
+import { Outlet } from "react-router-dom";
+import Profile from "./Profile";
+import ProfileClass from "./ProfileClass";
+
 const About = () => {
   return (
-    <>
-      <h1>About Us Page....</h1>
-    </>
+    <div>
+      <h1>About Us Page here...</h1>
+      <ProfileClass name={"Bikash Class Based Props"} />
+      <Profile name={"Bikash functional Based Props"} />
+    </div>
   );
 };
 
