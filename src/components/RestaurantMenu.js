@@ -29,6 +29,7 @@ const RestaurantMenu = () => {
       </span>
       <span className="menuList">
         <h1>Menu</h1>
+        <h1></h1>
         <ul>
           {Object.values(restaurant?.menu?.items).map((item) => (
             <li key={item.id}>{item.name}</li>

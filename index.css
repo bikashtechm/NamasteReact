@@ -232,3 +232,12 @@ li a.active {
   width: 50%;
   height: 50%;
 }
+
+.online_offline_icon {
+  width: 30px;
+  height: 30px;
+}
+
+.content {
+  text-align: center;
+}
