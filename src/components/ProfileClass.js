@@ -2,28 +2,37 @@ import React, { Component } from "react";
 
 class ProfileClass extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      count: 0,
-      target: 20,
+      userInfo: {
+        name: "Dummy Name",
+        location: "Dummy Location",
+        company: "Dummy Company",
+      },
     };
   }
+
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/akshaymarch7");
+    const json = await data.json();
+    this.setState({ userInfo: json });
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate called..");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
+
   render() {
-    const { target } = this.state;
     return (
       <div>
-        <h4>Profile Class Component</h4>
-        <h5>Class - Name:{this.props.name}</h5>
-        <h6>Class - Count : {this.state.count}</h6>
-        <h6>Class - Target: {target}</h6>
-        <button
-          onClick={() => {
-            this.setState({ count: 10 });
-          }}
-        >
-          Count
-        </button>
-        <br />
+        <img className="avtar_size" src={this.state.userInfo?.avatar_url} />
+        <h3>Name: {this.state.userInfo?.name}</h3>
+        <h4>Location: {this.state.userInfo?.location}</h4>
+        <h5>Company: {this.state.userInfo?.company}</h5>
       </div>
     );
   }

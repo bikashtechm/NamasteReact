@@ -1,15 +1,21 @@
-import { Outlet } from "react-router-dom";
 import Profile from "./Profile";
-import ProfileClass from "./ProfileClass";
+import { Component } from "react";
 
-const About = () => {
-  return (
-    <div>
-      <h1>About Us Page here...</h1>
-      <ProfileClass name={"Bikash Class Based Props"} />
-      <Profile name={"Bikash functional Based Props"} />
-    </div>
-  );
-};
+class About extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {}
+
+  render() {
+    return (
+      <div>
+        <h3>About Us Page</h3>
+        <Profile />
+      </div>
+    );
+  }
+}
 
 export default About;

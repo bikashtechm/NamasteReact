@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Profile = (props) => {
   const [count, setCount] = useState(0);
   const [target, setTarget] = useState(20);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log("setInterval called inside useEffect()");
+    }, 1000);
+
+    // START - This will be called when we are unmounting the component
+    return () => {
+      clearInterval(timer);
+    };
+    // END - This will be called when we are unmounting the component
+  }, []);
   return (
     <div>
       <h4>Profile Functional Component...</h4>

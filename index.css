@@ -219,3 +219,8 @@ li a.active {
 .avatar {
   width: 15%;
 }
+
+.avtar_size {
+  width: 15%;
+  height: 15%;
+}
