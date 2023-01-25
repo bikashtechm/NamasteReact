@@ -15,6 +15,14 @@
   display: flex;
 }
 
+.menuCard {
+  display: flex;
+}
+
+.menuList {
+  margin-left: 10px;
+}
+
 .nav-items > ul > li {
   padding: 10px;
   margin-top: 20px;
@@ -155,7 +163,7 @@
   cursor: pointer;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -164,7 +172,7 @@ ul {
 
 li {
   float: left;
-}
+} */
 
 li a {
   display: block;
@@ -217,10 +225,10 @@ li a.active {
 }
 
 .avatar {
-  width: 15%;
+  width: 50%;
 }
 
 .avtar_size {
-  width: 15%;
-  height: 15%;
+  width: 50%;
+  height: 50%;
 }

@@ -1,4 +1,5 @@
 import Profile from "./Profile";
+import ProfileClass from "./ProfileClass";
 import { Component } from "react";
 
 class About extends Component {
@@ -12,7 +13,7 @@ class About extends Component {
     return (
       <div>
         <h3>About Us Page</h3>
-        <Profile />
+        <ProfileClass />
       </div>
     );
   }
