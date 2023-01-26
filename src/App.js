@@ -12,6 +12,7 @@ import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import ProfileClass from "./components/ProfileClass";
+import Instamart from "./components/Instamart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -60,6 +61,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: <Instamart />,
       },
     ],
   },

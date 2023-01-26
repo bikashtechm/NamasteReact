@@ -15,7 +15,7 @@ const Profile = (props) => {
     // END - This will be called when we are unmounting the component
   }, []);
   return (
-    <div>
+    <div className="content">
       <h4>Profile Functional Component...</h4>
       <h5>Functional - Name:{props.name}</h5>
       <h6>Functional - Count: {count}</h6>

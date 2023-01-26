@@ -28,7 +28,7 @@ class ProfileClass extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <img className="avtar_size" src={this.state.userInfo?.avatar_url} />
         <h3>Name: {this.state.userInfo?.name}</h3>
         <h4>Location: {this.state.userInfo?.location}</h4>

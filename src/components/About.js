@@ -11,7 +11,7 @@ class About extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <h3>About Us Page</h3>
         <ProfileClass />
       </div>
