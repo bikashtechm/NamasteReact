@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="footerLayout">
+    <div className="text-center">
       <p>
         Author: Bikash Shaw
         <br />

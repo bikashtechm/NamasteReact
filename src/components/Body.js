@@ -6,7 +6,7 @@ import { filterRestaurantData } from "../utils/helper";
 import { OFFLINE_ICON } from "../Constants";
 import useOnline from "../utils/useOnline";
 
-const Body = () => {
+const Body = ({ user }) => {
   useEffect(() => {
     getRestaurants();
   }, []);
@@ -81,7 +81,7 @@ const Body = () => {
               to={"/restaurant/" + restaurant.data.id}
               key={restaurant.data.id}
             >
-              <RestaurantCard {...restaurant.data} />
+              <RestaurantCard {...restaurant.data} user={user} />
             </Link>
           );
         })}
