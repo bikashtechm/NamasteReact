@@ -1,16 +1,23 @@
 import { useState } from "react";
 const Section = ({ title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showHideButtonName, setShowHideButtonName] = useState("Show");
   return (
     <div className="border-2 border-grey p-3 m-3 bg-gray-100">
       <h3 className="font-bold text-lg font-serif">{title}</h3>
       <button
-        className="cursor-pointer"
+        className="cursor-pointer text-xs font-bold text-gray-400"
         onClick={() => {
-          !isVisible ? setIsVisible(true) : setIsVisible(false);
+          if (!isVisible) {
+            setIsVisible(true);
+            setShowHideButtonName("Hide");
+          } else {
+            setIsVisible(false);
+            setShowHideButtonName("Show");
+          }
         }}
       >
-        Show
+        {showHideButtonName}
       </button>
       {isVisible && <p className="text-sm">{description}</p>}
     </div>

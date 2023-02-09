@@ -17,22 +17,45 @@ const Header = () => {
       <Title />
       <div className="py-9">
         <ul className="flex p-2">
-          <li className="px-4">
-            <Link className="active" to="/">
+          <li>
+            <Link
+              className="p-2 m-2 text-black rounded-md hover:bg-blue-200 font-semibold"
+              to="/"
+            >
               Home
             </Link>
           </li>
-          <li className="px-4">
-            <Link to="/about">About Us</Link>
+          <li>
+            <Link
+              className="p-2 m-2 text-black rounded-md hover:bg-blue-200 font-semibold"
+              to="/about"
+            >
+              About Us
+            </Link>
           </li>
-          <li className="px-4">
-            <Link to="/contact">Contact Us</Link>
+          <li>
+            <Link
+              className="p-2 m-2 text-black rounded-md hover:bg-blue-200 font-semibold"
+              to="/contact"
+            >
+              Contact Us
+            </Link>
           </li>
-          <li className="px-4">
-            <Link to="/cart">Cart</Link>
+          <li>
+            <Link
+              className="p-2 m-2 text-black rounded-md hover:bg-blue-200 font-semibold"
+              to="/cart"
+            >
+              Cart
+            </Link>
           </li>
-          <li className="px-4">
-            <Link to={"/instamart"}>Instamart</Link>
+          <li>
+            <Link
+              className="p-2 m-2 text-black rounded-md hover:bg-blue-200 font-semibold"
+              to={"/instamart"}
+            >
+              Instamart
+            </Link>
           </li>
         </ul>
       </div>
