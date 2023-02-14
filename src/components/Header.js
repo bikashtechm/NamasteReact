@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
+import UserContext from "../utils/UserContext";
 
 const Title = () => {
   return (
@@ -12,6 +13,7 @@ const Title = () => {
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user } = useContext(UserContext);
   return (
     <div className="flex justify-between bg-amber-200 shadow-lg p-2">
       <Title />
@@ -59,6 +61,8 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      <span className="p-11 font-bold text-red-900">{user.name}</span>
+
       {isLoggedIn ? (
         <button
           className="LogoutButton"
