@@ -2,8 +2,8 @@ import { createContext } from "react";
 
 const UserContext = createContext({
   user: {
-    name: "Bikash Shaw",
-    email: "1985.bikash.shaw@gmail.com",
+    name: "Aarav Shaw",
+    email: "aarav.shaw@gmail.com",
   },
 });
 

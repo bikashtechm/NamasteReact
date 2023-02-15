@@ -12,6 +12,7 @@ import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 
@@ -20,14 +21,18 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const AppLayout = () => {
   const [user, setUser] = useState({
     name: "Bikash Shaw",
-    email: "bikash.shaw@react.com",
+    email: "bikash.shaw@gmail.com",
   });
   return (
-    <>
+    <UserContext.Provider
+      value={{
+        user: user,
+      }}
+    >
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </UserContext.Provider>
   );
 };
 

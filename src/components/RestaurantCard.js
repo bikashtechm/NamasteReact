@@ -10,6 +10,7 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
       <div className="text-xs">{cuisines.join(", ")}</div>
       <div className="text-xs">{avgRating} Stars</div>
       <div className="text-xs">{user.name}</div>
+      <div className="text-xs">{user.email}</div>
     </div>
   );
 };
