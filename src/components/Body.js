@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterRestaurantData } from "../utils/helper";
 import { OFFLINE_ICON } from "../Constants";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const Body = () => {
   const [searchTxt, setSearchTxt] = useState("");
   const [filterRestaurantListData, setfilterRestaurantListData] = useState([]);
   const online = useOnline();
+  const { user, setUser } = useContext(UserContext);
   if (!online) {
     return (
       <div className="content">
@@ -73,6 +75,18 @@ const Body = () => {
           {" "}
           Search
         </button>
+        <span>
+          <input
+            type="text"
+            value={user.name}
+            onChange={(e) => {
+              setUser({
+                name: e.target.value,
+                email: "saraswati@gmail.com",
+              });
+            }}
+          />
+        </span>
       </div>
       <div className="flex flex-wrap">
         {filterRestaurantListData.map((restaurant) => {
